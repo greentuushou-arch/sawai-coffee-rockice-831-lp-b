@@ -50,7 +50,6 @@ a{ text-decoration:none; color:inherit; }
 }
 .ph[data-ratio="16-9"]{ aspect-ratio:16/9; }
 .ph[data-ratio="wide"]{ aspect-ratio:2.2/1; }
-.ph[data-ratio="4-5"]{ aspect-ratio:4/5; }
 .ph-on-dark{ border-color:rgba(255,255,255,.5); color:var(--white); background:repeating-linear-gradient(45deg, rgba(255,255,255,.07) 0 10px, transparent 10px 20px); }
 .ph-icon{ width:30px; height:30px; opacity:.55; }
 .ph-label{ font-weight:900; font-size:.84rem; line-height:1.5; margin:0; }
@@ -95,7 +94,7 @@ a{ text-decoration:none; color:inherit; }
 
 /* ===================== 01: ファーストビュー(1枚のポスター画像+機能パーツ) ===================== */
 .ed-hero{ position:relative; background:var(--paper); }
-.ed-hero-poster{ width:100%; border-radius:0; border-width:0 0 4px; }
+.ed-hero-poster{ width:100%; display:block; }
 .ed-hero-below{ padding:22px 20px 26px; }
 .ed-countdown{ display:flex; align-items:center; justify-content:space-between; background:rgba(27,44,79,.06); border:1px solid rgba(27,44,79,.14); border-radius:8px; padding:12px 16px; margin:0 0 16px; }
 .ed-countdown-label{ font-size:.7rem; color:var(--ink); opacity:.75; font-weight:700; }
@@ -233,10 +232,7 @@ a{ text-decoration:none; color:inherit; }
 .ed-sticky-arrow{ flex:none; font-size:.82rem; font-weight:900; color:var(--yellow); }
 
 @media screen and (min-width:768px){
-  .ed-hero{ padding:56px 48px 46px; }
-  .ed-hero-date-num{ font-size:6rem; }
-  .ed-hero-free-word{ font-size:6.6rem; }
-  .ed-hero-watermark{ font-size:20rem; }
+  .ed-hero-below{ padding:26px 48px 34px; }
   .ed-product,.ed-deal,.ed-howto,.ed-review,.ed-last,.ed-notices,.ed-imglist{ padding-left:48px; padding-right:48px; }
   .ed-howto-steps{ flex-direction:row; align-items:flex-start; }
   .ed-howto-step{ flex-direction:column; text-align:center; flex:1; }
@@ -262,14 +258,8 @@ a{ text-decoration:none; color:inherit; }
        01｜ファーストビュー(1枚のポスター画像+機能パーツ)
        ============================================================ -->
   <section class="ed-hero">
-    <!-- ▼画像差し替え: images/hero/hero-poster.jpg (縦長ポスター, 推奨1200×1500px)
-         このFVはコピー・価格・イラストすべてを含んだ1枚のポスター画像に置き換える想定です。
-         必要な要素・コピー・配色の詳細はページ下部「画像制作のお願い」を参照してください。 -->
-    <div class="ph ed-hero-poster" data-ratio="4-5">
-      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
-      <p class="ph-label">ここにFVポスター画像<br>(コピー・価格・イラストを含む1枚)</p>
-      <p class="ph-size ed-cond">1200 × 1500</p>
-    </div>
+    <img src="images/hero/hero-poster.jpg" alt="8月31日限定 澤井珈琲 ロックでアイスコーヒー 2セット目無料 通常6,476円が3,238円 実質50%OFF" class="ed-hero-poster">
+
 
     <div class="ed-hero-below">
       <div class="ed-countdown">
@@ -514,29 +504,10 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="ed-imglist">
     <p class="ed-imglist-title">画像制作のお願い(このセクションは確認用です・納品前に削除してください)</p>
-    <p class="ed-imglist-sub">ページ内の点線枠と同じ4箇所です。差し替えは各枠を <code>&lt;img&gt;</code> タグに置き換えるだけです。共通の配色は 生成り(#F7F1E2)・ブルー(#2455D6)・レッド(#E63328)・イエロー(#FFCC33) です。</p>
+    <p class="ed-imglist-sub">ファーストビュー画像はご提供いただいたものを設置済みです。残り3箇所が点線のプレースホルダー枠のままです。差し替えは各枠を <code>&lt;img&gt;</code> タグに置き換えるだけです。共通の配色は 生成り(#F7F1E2)・ブルー(#2455D6)・レッド(#E63328)・イエロー(#FFCC33) です。</p>
 
     <div class="ed-imglist-item">
-      <p class="ed-imglist-name">① FVポスター画像(images/hero/hero-poster.jpg)</p>
-      <span class="ed-imglist-size">推奨 1200 × 1500px(縦長・4:5)</span>
-      <p class="ed-imglist-row"><b>役割:</b> ページ最上部、1枚で「8.31限定・2セット目無料」を伝えきるメインビジュアル。コピー・価格・イラストをすべて画像内に含みます(この画像より下は、カウントダウンとクーポン獲得ボタンのみHTML表示)。</p>
-      <p class="ed-imglist-row"><b>雰囲気:</b> ご共有いただいた参考画像(生成り地+手描き風ブルーの線画イラスト+赤・黄のアクセント)のテイストを踏襲。夏のコーヒーフェス感のある、明るく楽しいポスター調。</p>
-      <p class="ed-imglist-row"><b>含めるべき要素・コピー(上から):</b></p>
-      <p class="ed-imglist-row">　1. 日付バッジ(丸・イエロー地): 「8月31日限定」</p>
-      <p class="ed-imglist-row">　2. 巨大な日付ロゴ: 「8.31」+「ONLY!」</p>
-      <p class="ed-imglist-row">　3. 一言コピー: 「金額は一つ分なのに、届くのは二つ。」</p>
-      <p class="ed-imglist-row">　4. 最大級のメインコピー(レッド): 「2セット目、無料！」</p>
-      <p class="ed-imglist-row">　5. 帯バナー(ブルー地・白文字): 「2個購入すると1個無料」</p>
-      <p class="ed-imglist-row">　6. 価格表示: 「通常 6,476円」(取り消し線)→「3,238円」(アンダーライン強調)</p>
-      <p class="ed-imglist-row">　7. 商品パッケージ×2(「ロックでアイスコーヒー 100袋入り」表記+「+」で2つを繋ぐ、または「もう1箱ついてくる！」の吹き出し)</p>
-      <p class="ed-imglist-row">　8. 「実質50%OFF」の丸バッジ(レッド地・白文字)</p>
-      <p class="ed-imglist-row">　9. アイスコーヒー・氷・グラスのイラストまたは写真(参考画像のような線画イラストでも、実写でも可)</p>
-      <p class="ed-imglist-row">　10. 手描き風の一言: 「氷にお湯を注ぐだけ！約1分でOK」</p>
-      <p class="ed-imglist-row"><b>注意:</b> ご共有いただいた参考画像は「日曜日」表記でしたが、2026年8月31日は<strong>月曜日</strong>です。曜日を入れる場合はご留意ください(曜日を入れず「8月31日限定」のみでも問題ありません)。</p>
-    </div>
-
-    <div class="ed-imglist-item">
-      <p class="ed-imglist-name">② 商品のおいしさ訴求(images/product/product-taste.jpg)</p>
+      <p class="ed-imglist-name">① 商品のおいしさ訴求(images/product/product-taste.jpg)</p>
       <span class="ed-imglist-size">推奨 1600 × 900px</span>
       <p class="ed-imglist-row"><b>役割:</b> セール感の合間に一呼吸、「ちゃんと美味しそう」を伝える。</p>
       <p class="ed-imglist-row"><b>構図:</b> グラスに注がれたアイスコーヒーのクローズアップ。氷の透明感、コーヒーの色、水滴などが分かる爽やかな一枚。</p>
@@ -544,7 +515,7 @@ a{ text-decoration:none; color:inherit; }
     </div>
 
     <div class="ed-imglist-item">
-      <p class="ed-imglist-name">③ 2セット目無料訴求(images/deal/deal-2set.jpg)</p>
+      <p class="ed-imglist-name">② 2セット目無料訴求(images/deal/deal-2set.jpg)</p>
       <span class="ed-imglist-size">推奨 1600 × 700px</span>
       <p class="ed-imglist-row"><b>役割:</b> 「2セット届く」を視覚的に一発で理解させる。</p>
       <p class="ed-imglist-row"><b>構図:</b> 商品パッケージ(50袋入り)を2セット並べたカット。可能であれば片方に「FREE」「無料」等のPOP風の小さなタグ演出を添えられると理想。</p>
@@ -552,7 +523,7 @@ a{ text-decoration:none; color:inherit; }
     </div>
 
     <div class="ed-imglist-item">
-      <p class="ed-imglist-name">④ ラストCTA画像(images/last/last-cta.jpg)</p>
+      <p class="ed-imglist-name">③ ラストCTA画像(images/last/last-cta.jpg)</p>
       <span class="ed-imglist-size">推奨 1600 × 700px</span>
       <p class="ed-imglist-row"><b>役割:</b> 最後の後押し。「これを逃したらもう来年」という気持ちにさせる。</p>
       <p class="ed-imglist-row"><b>構図:</b> ①のヒーロー画像と近いテンションでもよいが、少し引きの構図で商品全体(2セット分)が見える方が最終CTAとして安心感が出ます。</p>
