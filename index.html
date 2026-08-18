@@ -8,8 +8,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Zen Kaku Gothic New(太字ゴシック中心) / Anton(巨大な英数字) / Yusei Magic(殴り書き風の一言) -->
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Anton&family=Yusei+Magic&display=swap" rel="stylesheet">
+<!-- Zen Kaku Gothic New(日本語) / Barlow・Barlow Condensed(数字・英字) / Yusei Magic(殴り書き風の一言) -->
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Barlow:wght@600;700;800;900&family=Barlow+Condensed:wght@700;800;900&family=Yusei+Magic&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -36,8 +36,8 @@ body{
 }
 img{ max-width:100%; display:block; }
 a{ text-decoration:none; color:inherit; }
-.ed-a{ font-family:"Anton",sans-serif; font-weight:400; letter-spacing:.02em; }
-.ed-fig{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; letter-spacing:0; }
+.ed-cond{ font-family:"Barlow Condensed",sans-serif; font-weight:900; letter-spacing:.01em; }
+.ed-num{ font-family:"Barlow",sans-serif; font-weight:800; letter-spacing:0; }
 .ed-hand{ font-family:"Yusei Magic",cursive; }
 .ed-wrap{ max-width:780px; margin:0 auto; background:var(--white); position:relative; overflow:hidden; box-shadow:0 0 60px rgba(0,0,0,.3); }
 
@@ -84,8 +84,8 @@ a{ text-decoration:none; color:inherit; }
 .ed-coupon-tag{ font-size:.54rem; line-height:1; font-weight:900; background:rgba(255,255,255,.22); border:1px solid rgba(255,255,255,.65); border-radius:999px; padding:3px 9px; color:var(--white); }
 .ed-coupon-period{ font-size:.54rem; line-height:1; font-weight:900; color:rgba(255,255,255,.85); }
 .ed-coupon-figure{ flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0; overflow:hidden; }
-.ed-coupon-num{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:clamp(3.8rem,20vw,6.4rem); color:var(--white); line-height:1; letter-spacing:-.01em; white-space:nowrap; }
-.ed-coupon-unit{ font-size:clamp(1.6rem,7.4vw,2.4rem); font-weight:900; color:var(--white); white-space:nowrap; line-height:1; margin-top:2px; }
+.ed-coupon-num{ font-family:"Barlow",sans-serif; font-weight:800; font-size:clamp(3.8rem,20vw,6.4rem); color:var(--white); line-height:1; letter-spacing:0; white-space:nowrap; }
+.ed-coupon-unit{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(1.6rem,7.4vw,2.4rem); font-weight:900; color:var(--white); white-space:nowrap; line-height:1; margin-top:2px; }
 .ed-coupon-seam{ flex:none; margin:0 16px; border-top:2.5px dashed rgba(255,255,255,.65); }
 .ed-coupon-cta{ flex:none; display:flex; align-items:center; justify-content:center; gap:6px; padding:5px 16px; background:var(--yellow); color:var(--red-deep); font-weight:900; font-size:.88rem; }
 
@@ -210,7 +210,7 @@ a{ text-decoration:none; color:inherit; }
 .ed-last-free span{ color:var(--yellow); }
 .ed-last-photo{ margin:0 0 22px; }
 .ed-last-eqrow{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin:0 0 6px; }
-.ed-last-before{ position:relative; font-size:1.1rem; color:rgba(255,255,255,.6); }
+.ed-last-before{ position:relative; font-size:1.1rem; font-weight:700; color:rgba(255,255,255,.6); }
 .ed-last-before::after{ content:''; position:absolute; left:-8%; right:-8%; top:52%; height:2px; background:var(--navy); transform:rotate(-6deg); }
 .ed-last-after{ font-size:2.6rem; color:var(--yellow); }
 .ed-last-after span{ font-size:1.05rem; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; margin-left:4px; }
@@ -287,13 +287,13 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="ed-hero">
     <div class="ed-hero-bg" aria-hidden="true"></div>
-    <span class="ed-hero-watermark ed-a" aria-hidden="true">2</span>
+    <span class="ed-hero-watermark ed-cond" aria-hidden="true">2</span>
 
     <div class="ed-hero-inner">
       <p class="ed-hero-kicker">澤井珈琲 ／ 31日のサワイの日</p>
 
       <div class="ed-hero-date">
-        <span class="ed-hero-date-num ed-a">8.31</span>
+        <span class="ed-hero-date-num ed-cond">8.31</span>
         <span class="ed-hero-date-word">だけ。</span>
       </div>
 
@@ -312,20 +312,20 @@ a{ text-decoration:none; color:inherit; }
         <div class="ph ph-on-dark" data-ratio="16-9">
           <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
           <p class="ph-label">ここに横長キャンペーン画像</p>
-          <p class="ph-size ed-a">1600 × 900</p>
+          <p class="ph-size ed-cond">1600 × 900</p>
         </div>
       </div>
 
       <div class="ed-hero-price">
-        <span class="ed-hero-price-before ed-fig">6,476円</span>
+        <span class="ed-hero-price-before"><span class="ed-num">6,476</span>円</span>
         <span class="ed-hero-price-arrow">→</span>
-        <span class="ed-hero-price-after"><span class="ed-fig">3,238</span><span>円</span></span>
+        <span class="ed-hero-price-after"><span class="ed-num">3,238</span><span>円</span></span>
       </div>
       <p class="ed-hero-price-note">2セット(100袋)が実質1セット価格 ／ 8月31日限定クーポン適用時</p>
 
       <div class="ed-countdown">
         <span class="ed-countdown-label" id="edCdLabel">31日のサワイの日開始まで</span>
-        <span class="ed-countdown-timer ed-fig" id="edCdTimer">--<span class="ed-cd-unit">日</span>--<span class="ed-cd-unit">時間</span></span>
+        <span class="ed-countdown-timer ed-num" id="edCdTimer">--<span class="ed-cd-unit">日</span>--<span class="ed-cd-unit">時間</span></span>
       </div>
 
       <a href="#" class="ed-coupon" data-coupon style="--notch-bg:var(--navy);">
@@ -336,7 +336,7 @@ a{ text-decoration:none; color:inherit; }
           <span class="ed-coupon-period">8/31限定</span>
         </span>
         <span class="ed-coupon-figure">
-          <span class="ed-coupon-num">3,238</span><span class="ed-coupon-unit">円OFF</span>
+          <span class="ed-coupon-num">3,238</span><span class="ed-coupon-unit">円<span class="ed-num">OFF</span></span>
         </span>
         <span class="ed-coupon-seam"></span>
         <span class="ed-coupon-cta">獲得する →</span>
@@ -356,14 +356,14 @@ a{ text-decoration:none; color:inherit; }
        02｜商品紹介(爽やか)
        ============================================================ -->
   <section class="ed-product">
-    <p class="ed-product-kicker">ROCK DE ICE</p>
+    <p class="ed-product-kicker ed-cond">ROCK DE ICE</p>
     <h2 class="ed-product-h2">氷にお湯を注ぐだけ<br>本格アイスコーヒー</h2>
 
     <!-- ▼画像差し替え: images/product/product-taste.jpg (推奨1600×900px) -->
     <div class="ph ed-product-photo" data-ratio="16-9">
       <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
       <p class="ph-label">ここにアイスコーヒーの商品写真</p>
-      <p class="ph-size ed-a">1600 × 900</p>
+      <p class="ph-size ed-cond">1600 × 900</p>
     </div>
 
     <p class="ed-product-body">氷を入れたグラスにドリップバッグをセットして、お湯を注ぐだけ。<strong>約1分</strong>で、深煎りの濃厚な香りをぎゅっと閉じ込めた本格アイスコーヒーが完成します。水出しのように前日の仕込みは不要、作り置きで冷蔵庫を塞ぐこともありません。</p>
@@ -376,37 +376,37 @@ a{ text-decoration:none; color:inherit; }
     <div class="ed-deal-stripe" aria-hidden="true"></div>
     <div class="ed-burst-wrap">
       <div class="ed-burst">
-        <span class="ed-burst-text"><small>実質</small><b class="ed-a">50</b><small>%OFF</small></span>
+        <span class="ed-burst-text"><small>実質</small><b class="ed-cond">50</b><small>%<span class="ed-num">OFF</span></small></span>
       </div>
     </div>
 
     <div class="ed-deal-inner">
-      <p class="ed-deal-kicker">AUG 31 SPECIAL</p>
+      <p class="ed-deal-kicker ed-cond">AUG 31 SPECIAL</p>
       <h2 class="ed-deal-h2">8月31日だけの<br>特別なルールです。</h2>
       <span class="ed-deal-hand ed-hand">このチャンス見逃さないで！</span>
 
       <div class="ed-deal-setrow">
-        <span class="ed-deal-set ed-a">2 SET</span>
+        <span class="ed-deal-set ed-cond">2 SET</span>
         <span class="ed-deal-set-label">買うのは1つでも<br>届くのは2セット</span>
       </div>
 
       <div class="ed-deal-eqrow">
-        <span class="ed-deal-before ed-fig">6,476円</span>
+        <span class="ed-deal-before"><span class="ed-num">6,476</span>円</span>
         <span class="ed-deal-arrow">→</span>
-        <span class="ed-deal-after"><span class="ed-fig">3,238</span><span>円</span></span>
+        <span class="ed-deal-after"><span class="ed-num">3,238</span><span>円</span></span>
       </div>
 
       <div class="ed-deal-stat">
-        <div><p class="ed-deal-stat-num ed-fig">100</p><p class="ed-deal-stat-label">袋(2セット合計)</p></div>
-        <div><p class="ed-deal-stat-num ed-fig">0</p><p class="ed-deal-stat-label">送料</p></div>
-        <div><p class="ed-deal-stat-num ed-fig">×2</p><p class="ed-deal-stat-label">ポイント</p></div>
+        <div><p class="ed-deal-stat-num ed-num">100</p><p class="ed-deal-stat-label">袋(2セット合計)</p></div>
+        <div><p class="ed-deal-stat-num ed-num">0</p><p class="ed-deal-stat-label">送料</p></div>
+        <div><p class="ed-deal-stat-num ed-num">×2</p><p class="ed-deal-stat-label">ポイント</p></div>
       </div>
 
       <!-- ▼画像差し替え: images/deal/deal-2set.jpg (推奨1600×700px、2セット並んだ商品+「無料」訴求) -->
       <div class="ph ph-on-dark ed-deal-photo" data-ratio="wide">
         <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
         <p class="ph-label">ここに2セット並んだ商品画像</p>
-        <p class="ph-size ed-a">1600 × 700</p>
+        <p class="ph-size ed-cond">1600 × 700</p>
       </div>
 
       <p class="ed-deal-body">50袋入り「ロックでアイスコーヒー」を2セットご購入いただくと、会計時に3,238円クーポンが適用され、<strong>実質1セット分の価格で、もう1セットがまるごとプレゼント</strong>になります。100袋あれば、この夏はアイスコーヒーのストック切れの心配なしです。</p>
@@ -419,7 +419,7 @@ a{ text-decoration:none; color:inherit; }
           <span class="ed-coupon-period">8/31限定</span>
         </span>
         <span class="ed-coupon-figure">
-          <span class="ed-coupon-num">3,238</span><span class="ed-coupon-unit">円OFF</span>
+          <span class="ed-coupon-num">3,238</span><span class="ed-coupon-unit">円<span class="ed-num">OFF</span></span>
         </span>
         <span class="ed-coupon-seam"></span>
         <span class="ed-coupon-cta">獲得する →</span>
@@ -431,20 +431,20 @@ a{ text-decoration:none; color:inherit; }
        04｜購入方法(ここだけは非常に分かりやすく)
        ============================================================ -->
   <section class="ed-howto">
-    <p class="ed-howto-kicker">HOW TO GET</p>
+    <p class="ed-howto-kicker ed-cond">HOW TO GET</p>
     <h2 class="ed-howto-h2">プレゼントの受け取り方は<br>たったの3ステップ</h2>
 
     <div class="ed-howto-steps">
       <div class="ed-howto-step">
-        <span class="ed-howto-num ed-a">1</span>
+        <span class="ed-howto-num ed-cond">1</span>
         <div class="ed-howto-body">
-          <p class="ed-howto-title">クーポンGET</p>
+          <p class="ed-howto-title">クーポン<span class="ed-num">GET</span></p>
           <p class="ed-howto-sub">3,238円クーポンを、購入前に獲得</p>
         </div>
       </div>
       <div class="ed-howto-arrow">↓</div>
       <div class="ed-howto-step">
-        <span class="ed-howto-num ed-a">2</span>
+        <span class="ed-howto-num ed-cond">2</span>
         <div class="ed-howto-body">
           <p class="ed-howto-title">数量を「2」に</p>
           <p class="ed-howto-sub">商品ページで数量2でご購入(1のままだと対象外)</p>
@@ -452,7 +452,7 @@ a{ text-decoration:none; color:inherit; }
       </div>
       <div class="ed-howto-arrow">↓</div>
       <div class="ed-howto-step">
-        <span class="ed-howto-num ed-a">3</span>
+        <span class="ed-howto-num ed-cond">3</span>
         <div class="ed-howto-body">
           <p class="ed-howto-title">購入完了</p>
           <p class="ed-howto-sub">会計画面で6,476円→3,238円を確認</p>
@@ -467,9 +467,9 @@ a{ text-decoration:none; color:inherit; }
        05｜レビュー(静かに/信頼感)
        ============================================================ -->
   <section class="ed-review">
-    <p class="ed-review-kicker">REVIEW</p>
+    <p class="ed-review-kicker ed-cond">REVIEW</p>
     <div class="ed-review-score">
-      <span class="ed-review-score-num ed-fig">4.72</span>
+      <span class="ed-review-score-num ed-num">4.72</span>
       <span class="ed-review-score-sub">楽天レビュー総合評価<br>531件(2026年8月時点)</span>
     </div>
 
@@ -490,8 +490,8 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="ed-last">
     <div class="ed-last-inner">
-      <span class="ed-last-kicker">LAST CHANCE</span>
-      <p class="ed-last-date ed-a">8.31</p>
+      <span class="ed-last-kicker ed-cond">LAST CHANCE</span>
+      <p class="ed-last-date ed-cond">8.31</p>
       <p class="ed-last-date-word">が、ラストチャンス。</p>
 
       <p class="ed-last-free">2セット目<br><span>無料。</span></p>
@@ -500,13 +500,13 @@ a{ text-decoration:none; color:inherit; }
       <div class="ph ph-on-dark ed-last-photo" data-ratio="wide">
         <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
         <p class="ph-label">ここにラストCTA用画像</p>
-        <p class="ph-size ed-a">1600 × 700</p>
+        <p class="ph-size ed-cond">1600 × 700</p>
       </div>
 
       <div class="ed-last-eqrow">
-        <span class="ed-last-before ed-fig">6,476円</span>
+        <span class="ed-last-before"><span class="ed-num">6,476</span>円</span>
         <span>→</span>
-        <span class="ed-last-after"><span class="ed-fig">3,238</span><span>円</span></span>
+        <span class="ed-last-after"><span class="ed-num">3,238</span><span>円</span></span>
       </div>
       <p class="ed-last-note">ロックでアイスコーヒー 50袋入り×2セット(計100袋)</p>
 
@@ -536,7 +536,7 @@ a{ text-decoration:none; color:inherit; }
           <span class="ed-coupon-period">8/31限定</span>
         </span>
         <span class="ed-coupon-figure">
-          <span class="ed-coupon-num">3,238</span><span class="ed-coupon-unit">円OFF</span>
+          <span class="ed-coupon-num">3,238</span><span class="ed-coupon-unit">円<span class="ed-num">OFF</span></span>
         </span>
         <span class="ed-coupon-seam"></span>
         <span class="ed-coupon-cta">獲得する →</span>
@@ -613,7 +613,7 @@ a{ text-decoration:none; color:inherit; }
     <a href="#" class="ed-sticky-btn" data-coupon>
       <span class="ed-sticky-label">8/31限定</span>
       <span class="ed-sticky-num">2セット目無料・3,238円OFF</span>
-      <span class="ed-sticky-arrow">GET →</span>
+      <span class="ed-sticky-arrow ed-num">GET →</span>
     </a>
   </div>
 
