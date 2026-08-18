@@ -8,8 +8,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Zen Kaku Gothic New(太字ゴシック中心) / Anton(巨大な英数字) / Yomogi(手書き風の一言) -->
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Anton&family=Yomogi&display=swap" rel="stylesheet">
+<!-- Zen Kaku Gothic New(太字ゴシック中心) / Anton(巨大な英数字) / Yusei Magic(殴り書き風の一言) -->
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Anton&family=Yusei+Magic&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -38,7 +38,7 @@ img{ max-width:100%; display:block; }
 a{ text-decoration:none; color:inherit; }
 .ed-a{ font-family:"Anton",sans-serif; font-weight:400; letter-spacing:.02em; }
 .ed-fig{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; letter-spacing:0; }
-.ed-hand{ font-family:"Yomogi",cursive; }
+.ed-hand{ font-family:"Yusei Magic",cursive; }
 .ed-wrap{ max-width:780px; margin:0 auto; background:var(--white); position:relative; overflow:hidden; box-shadow:0 0 60px rgba(0,0,0,.3); }
 
 /* ===================== プレースホルダー画像枠 ===================== */
@@ -80,18 +80,18 @@ a{ text-decoration:none; color:inherit; }
 .ed-sticky-btn.is-ended{ pointer-events:none; opacity:.6; }
 .ed-coupon-notch{ position:absolute; top:50%; width:20px; height:20px; border-radius:50%; background:var(--notch-bg,var(--white)); transform:translateY(-50%); z-index:5; }
 .ed-coupon-notch.l{ left:-10px; } .ed-coupon-notch.r{ right:-10px; }
-.ed-coupon-top{ flex:none; display:flex; align-items:center; justify-content:space-between; padding:8px 16px 2px; }
-.ed-coupon-tag{ font-size:.62rem; font-weight:900; background:rgba(255,255,255,.22); border:1px solid rgba(255,255,255,.65); border-radius:999px; padding:3px 10px; color:var(--white); }
-.ed-coupon-period{ font-size:.62rem; font-weight:900; color:rgba(255,255,255,.9); }
-.ed-coupon-figure{ flex:1; min-height:0; display:flex; align-items:center; justify-content:center; gap:6px; }
-.ed-coupon-num{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:clamp(2.4rem,12vw,4rem); color:var(--white); line-height:1; letter-spacing:-.01em; white-space:nowrap; }
-.ed-coupon-unit{ font-size:clamp(1.05rem,3.8vw,1.4rem); font-weight:900; color:var(--white); white-space:nowrap; }
+.ed-coupon-ribbon{ flex:none; display:flex; align-items:center; justify-content:space-between; gap:7px; padding:5px 16px 0; line-height:1; }
+.ed-coupon-tag{ font-size:.54rem; line-height:1; font-weight:900; background:rgba(255,255,255,.22); border:1px solid rgba(255,255,255,.65); border-radius:999px; padding:3px 9px; color:var(--white); }
+.ed-coupon-period{ font-size:.54rem; line-height:1; font-weight:900; color:rgba(255,255,255,.85); }
+.ed-coupon-figure{ flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0; overflow:hidden; }
+.ed-coupon-num{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:clamp(3.8rem,20vw,6.4rem); color:var(--white); line-height:1; letter-spacing:-.01em; white-space:nowrap; }
+.ed-coupon-unit{ font-size:clamp(1.6rem,7.4vw,2.4rem); font-weight:900; color:var(--white); white-space:nowrap; line-height:1; margin-top:2px; }
 .ed-coupon-seam{ flex:none; margin:0 16px; border-top:2.5px dashed rgba(255,255,255,.65); }
-.ed-coupon-cta{ flex:none; display:flex; align-items:center; justify-content:center; gap:6px; padding:7px 16px; background:var(--yellow); color:var(--red-deep); font-weight:900; font-size:.94rem; }
+.ed-coupon-cta{ flex:none; display:flex; align-items:center; justify-content:center; gap:6px; padding:5px 16px; background:var(--yellow); color:var(--red-deep); font-weight:900; font-size:.88rem; }
 
 /* ===================== 手書き風スクリブル / スタンプ ===================== */
-.ed-scribble-wrap{ position:relative; display:inline-block; }
-.ed-scribble{ position:absolute; left:-12%; top:-18%; width:124%; height:138%; z-index:0; pointer-events:none; }
+.ed-scribble-wrap{ position:relative; display:inline-block; padding:10px 22px; transform:rotate(-3deg); }
+.ed-scribble{ position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; }
 .ed-stamp{ display:inline-flex; align-items:center; border-radius:999px; border:2px dashed currentColor; padding:6px 13px; font-size:.68rem; font-weight:900; }
 
 /* ===================== 01: ファーストビュー ===================== */
@@ -164,14 +164,15 @@ a{ text-decoration:none; color:inherit; }
 .ed-deal-body{ font-size:.93rem; line-height:1.95; color:rgba(255,255,255,.85); margin:0 0 22px; font-weight:500; }
 .ed-deal-body strong{ color:var(--yellow); font-weight:900; }
 
-.ed-burst-wrap{ position:absolute; top:24px; right:14px; z-index:5; transform:rotate(9deg); }
-.ed-burst{ position:relative; width:104px; height:104px; }
-.ed-burst span{ position:absolute; inset:4px; background:var(--yellow); box-shadow:0 6px 16px rgba(0,0,0,.35); }
-.ed-burst span:nth-child(1){ transform:rotate(0deg); } .ed-burst span:nth-child(2){ transform:rotate(20deg); }
-.ed-burst span:nth-child(3){ transform:rotate(40deg); } .ed-burst span:nth-child(4){ transform:rotate(60deg); }
-.ed-burst-text{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; color:var(--red-deep); text-align:center; line-height:1.05; }
-.ed-burst-text b{ font-size:1.5rem; }
-.ed-burst-text small{ font-size:.6rem; font-weight:900; }
+.ed-burst-wrap{ position:absolute; top:22px; right:18px; z-index:5; }
+.ed-burst{
+  position:relative; width:100px; height:100px; border-radius:50%; background:var(--yellow);
+  border:3px dashed var(--red-deep); box-shadow:0 8px 20px rgba(0,0,0,.35);
+  display:flex; align-items:center; justify-content:center;
+}
+.ed-burst-text{ display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--red-deep); text-align:center; line-height:1.05; }
+.ed-burst-text b{ font-size:1.6rem; }
+.ed-burst-text small{ font-size:.62rem; font-weight:900; }
 
 /* ===================== 04: 購入方法(明確な図解) ===================== */
 .ed-howto{ background:var(--white); padding:50px 22px 46px; }
@@ -301,7 +302,7 @@ a{ text-decoration:none; color:inherit; }
       <div class="ed-hero-free">
         <span class="ed-hero-free-label">2セット目</span>
         <span class="ed-scribble-wrap">
-          <svg class="ed-scribble" viewBox="0 0 240 120" aria-hidden="true"><path d="M16,58 C10,22 66,6 118,8 C176,10 222,26 226,58 C230,94 178,110 118,110 C58,110 22,96 16,58 Z" fill="none" stroke="#FF3B2E" stroke-width="7" stroke-linecap="round"/></svg>
+          <svg class="ed-scribble" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M7,48 C4,18 30,3 50,4 C73,5 97,17 95,48 C97,80 71,97 50,96 C28,97 4,78 7,48 Z" fill="none" stroke="#FFD400" stroke-width="5" stroke-linecap="round"/></svg>
           <span class="ed-hero-free-word">無料<span class="ed-hero-free-bang">！</span></span>
         </span>
       </div>
@@ -330,7 +331,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="#" class="ed-coupon" data-coupon style="--notch-bg:var(--navy);">
         <span class="ed-coupon-notch l"></span>
         <span class="ed-coupon-notch r"></span>
-        <span class="ed-coupon-top">
+        <span class="ed-coupon-ribbon">
           <span class="ed-coupon-tag">クーポン</span>
           <span class="ed-coupon-period">8/31限定</span>
         </span>
@@ -343,8 +344,8 @@ a{ text-decoration:none; color:inherit; }
       <p class="ed-note">クーポン獲得後、<b>数量を「2」</b>にしてご購入ください</p>
 
       <div class="ed-hero-badges">
-        <span class="ed-stamp" style="color:var(--yellow);border-color:var(--yellow);transform:rotate(-3deg);">ポイント2倍</span>
-        <span class="ed-stamp" style="color:var(--ice);border-color:var(--ice);transform:rotate(2deg);">送料無料</span>
+        <span class="ed-stamp" style="color:var(--yellow);border-color:var(--yellow);">ポイント2倍</span>
+        <span class="ed-stamp" style="color:var(--ice);border-color:var(--ice);">送料無料</span>
       </div>
     </div>
   </section>
@@ -375,7 +376,6 @@ a{ text-decoration:none; color:inherit; }
     <div class="ed-deal-stripe" aria-hidden="true"></div>
     <div class="ed-burst-wrap">
       <div class="ed-burst">
-        <span></span><span></span><span></span><span></span>
         <span class="ed-burst-text"><small>実質</small><b class="ed-a">50</b><small>%OFF</small></span>
       </div>
     </div>
@@ -383,7 +383,7 @@ a{ text-decoration:none; color:inherit; }
     <div class="ed-deal-inner">
       <p class="ed-deal-kicker">AUG 31 SPECIAL</p>
       <h2 class="ed-deal-h2">8月31日だけの<br>特別なルールです。</h2>
-      <span class="ed-deal-hand ed-hand">見逃したら、また来年。</span>
+      <span class="ed-deal-hand ed-hand">このチャンス見逃さないで！</span>
 
       <div class="ed-deal-setrow">
         <span class="ed-deal-set ed-a">2 SET</span>
@@ -414,7 +414,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="#" class="ed-coupon" data-coupon style="--notch-bg:var(--navy);">
         <span class="ed-coupon-notch l"></span>
         <span class="ed-coupon-notch r"></span>
-        <span class="ed-coupon-top">
+        <span class="ed-coupon-ribbon">
           <span class="ed-coupon-tag">クーポン</span>
           <span class="ed-coupon-period">8/31限定</span>
         </span>
@@ -531,7 +531,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="#" class="ed-coupon" data-coupon style="--notch-bg:var(--red-deep);margin-bottom:12px;">
         <span class="ed-coupon-notch l"></span>
         <span class="ed-coupon-notch r"></span>
-        <span class="ed-coupon-top">
+        <span class="ed-coupon-ribbon">
           <span class="ed-coupon-tag">クーポン</span>
           <span class="ed-coupon-period">8/31限定</span>
         </span>
